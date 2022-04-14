@@ -30,7 +30,7 @@
 ###
 <h2> My Best Repo Status <img src="https://i.pinimg.com/originals/01/63/6c/01636c5434cd0462086620c60fdfec16.gif" width=70px></h2>
 
-![github card](https://github-readme-stats.vercel.app/api/pin/?username=PunyaChael&repo=mvps&theme=dark)
+![github card](https://github-readme-stats.vercel.app/api/pin/?username=PunyaChael&repo=KazeRobot&theme=dark)
 ![github card](https://github-readme-stats.vercel.app/api/pin/?username=PunyaChael&repo=MAfia-phub-bot&theme=dark)
 ![github card](https://github-readme-stats.vercel.app/api/pin/?username=PunyaChael&repo=SubtitleTranslator-Bot&theme=dark)
 ![github card](https://github-readme-stats.vercel.app/api/pin/?username=PunyaChael&repo=Torrent-Search_bottg&theme=dark)
