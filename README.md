@@ -39,7 +39,6 @@
 <a href="inikahsiapa@gmail.com"><img src="https://img.shields.io/badge/-inikahsiapa@gmail.com-D14836?style=flat&logo=Gmail&logoColor=white"/></a>
 <a href="https://m.youtube.com/channel/UCbbWYVvhTHz3AzfgYz4fMgg"><img src="https://img.shields.io/youtube/channel/subscribers/UCbbWYVvhTHz3AzfgYz4fMgg"/></a>
 
-
 </p>
 
 
