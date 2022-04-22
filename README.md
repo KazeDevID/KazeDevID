@@ -33,6 +33,7 @@
 ![github card](https://github-readme-stats.vercel.app/api/pin/?username=PunyaChael&repo=KazeRobot&theme=dark)
 ![github card](https://github-readme-stats.vercel.app/api/pin/?username=PunyaChael&repo=Vcg-MusikBot&theme=dark)
 ![github card](https://github-readme-stats.vercel.app/api/pin/?username=PunyaChael&repo=AnimeGalleryBot&theme=dark)
+![github card](https://github-readme-stats.vercel.app/api/pin/?username=PunyaChael&repo=KaitoRobot&theme=dark)
  
 <h2 align="left">Connect Me<img src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif" width="50"></h2>
 <p align="left">
