@@ -1,11 +1,11 @@
 <img src="https://camo.githubusercontent.com/82291b0fe831bfc6781e07fc5090cbd0a8b912bb8b8d4fec0696c881834f81ac/68747470733a2f2f70726f626f742e6d656469612f394575424971676170492e676966" width="800" height="3">
 
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Hai+Iam+Kaze;How+To+Reach+Me+%3A+Contact+Me+On+Telegram;Ask+Me+About+Anything%2C+I+Am+Happy+To+Help)](https://github.com/PunyaChael)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Hai+Iam+Kaze;How+To+Reach+Me+%3A+Contact+Me+On+Telegram;Ask+Me+About+Anything%2C+I+Am+Happy+To+Help)](https://github.com/KazeDevID)
 
 ### ⚙️ &nbsp;GitHub Analytics
-<div align="center"><img src="https://github-readme-stats.vercel.app/api?username=PunyaChael&hide=contribs,issues,stars&theme=tokyonight" /></div>
-<div align="center"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=PunyaChael&hide_title=true&hide_border=true&theme=tokyonight" /></div>
+<div align="center"><img src="https://github-readme-stats.vercel.app/api?username=KazeDevID&hide=contribs,issues,stars&theme=tokyonight" /></div>
+<div align="center"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=KazeDevID&hide_title=true&hide_border=true&theme=tokyonight" /></div>
 
 
 
@@ -30,10 +30,10 @@
 ###
 <h2> My Best Repo Status <img src="https://i.pinimg.com/originals/01/63/6c/01636c5434cd0462086620c60fdfec16.gif" width=70px></h2>
 
-![github card](https://github-readme-stats.vercel.app/api/pin/?username=PunyaChael&repo=KazeRobot&theme=dark)
-![github card](https://github-readme-stats.vercel.app/api/pin/?username=PunyaChael&repo=Vcg-MusikBot&theme=dark)
-![github card](https://github-readme-stats.vercel.app/api/pin/?username=PunyaChael&repo=AnimeGalleryBot&theme=dark)
-![github card](https://github-readme-stats.vercel.app/api/pin/?username=PunyaChael&repo=KaitoRobot&theme=dark)
+![github card](https://github-readme-stats.vercel.app/api/pin/?username=KazeDevID&repo=KazeRobot&theme=dark)
+![github card](https://github-readme-stats.vercel.app/api/pin/?username=KazeDevID&repo=Vcg-MusikBot&theme=dark)
+![github card](https://github-readme-stats.vercel.app/api/pin/?username=KazeDevID&repo=AnimeGalleryBot&theme=dark)
+![github card](https://github-readme-stats.vercel.app/api/pin/?username=KazeDevID&repo=KaitoRobot&theme=dark)
  
 <h2 align="left">Connect Me<img src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif" width="50"></h2>
 <p align="left">
