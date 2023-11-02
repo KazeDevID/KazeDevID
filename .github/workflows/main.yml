@@ -30,7 +30,7 @@ jobs:
 
           # Options
           user: KazeDevID
-          template: terminal
+          template: classic
           base: header, activity, community, repositories, metadata
           config_timezone: Asia/Makassar
           plugin_achievements: yes
