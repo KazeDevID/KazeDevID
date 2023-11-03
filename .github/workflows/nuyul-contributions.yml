@@ -2,7 +2,7 @@ name: automatic commits daily
 on:  
   push:
     branches:
-      - main
+      - master
   schedule:
     - cron:  '0 12 * * *'
   workflow_dispatch:
