@@ -562,8 +562,8 @@
                         <div class="category column">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="50" height="50" class="gauge low">
                                 <circle class="gauge-base" r="53" cx="60" cy="60"/>
-                                <circle class="gauge-arc" transform="rotate(-90 60 60)" r="53" cx="60" cy="60" stroke-dasharray="161.21 329"/>
-                                <text x="60" y="60" dominant-baseline="central">49</text>
+                                <circle class="gauge-arc" transform="rotate(-90 60 60)" r="53" cx="60" cy="60" stroke-dasharray="138.18 329"/>
+                                <text x="60" y="60" dominant-baseline="central">42</text>
                             </svg>
                             <span class="title">Performance</span>
                         </div>
@@ -3448,7 +3448,7 @@
                                 <div class="title">
                                     <span class="prefix"></span>
                                     Maintainer
-                                    <span class="gh">ranked 2.11m out of 71.8m repositories</span>
+                                    <span class="gh">ranked 2.11m out of 79.8m repositories</span>
                                 </div>
                                 <div class="text">Maintaining a repository with 8 stars</div>
                             </div>
@@ -3557,7 +3557,7 @@
             </section>
             <footer>
                 <span>These metrics include private contributions</span>
-                <span>Last updated 3 Nov 2023, 11:08:34 (timezone Asia/Makassar) with lowlighter/metrics@3.34.0</span>
+                <span>Last updated 3 Nov 2023, 12:09:21 (timezone Asia/Makassar) with lowlighter/metrics@3.34.0</span>
             </footer>
         </div>
         <div xmlns="http://www.w3.org/1999/xhtml" id="metrics-end"></div>
