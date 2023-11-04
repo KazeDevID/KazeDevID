@@ -1,0 +1,17 @@
+name: cleaning 
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Eksekusi tiap hari pukul 00:00 (UTC)
+
+jobs:
+  delete-files:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Remove files from directory
+      run: |
+        rm -rf files/*
