@@ -1,0 +1,1635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Utils Support - Lightweight JavaScript Utility Library</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <style>
+    :root {
+      --primary-color: #3b82f6;
+      --primary-dark: #2563eb;
+      --primary-light: #93c5fd;
+      --secondary-color: #10b981;
+      --secondary-dark: #059669;
+      --text-color: #1f2937;
+      --text-light: #6b7280;
+      --bg-color: #ffffff;
+      --bg-light: #f9fafb;
+      --bg-dark: #f3f4f6;
+      --border-color: #e5e7eb;
+      --code-bg: #282c34;
+      --sidebar-width: 280px;
+      --header-height: 60px;
+      --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .dark-theme {
+      --primary-color: #60a5fa;
+      --primary-dark: #3b82f6;
+      --primary-light: #93c5fd;
+      --secondary-color: #34d399;
+      --secondary-dark: #10b981;
+      --text-color: #f9fafb;
+      --text-light: #d1d5db;
+      --bg-color: #111827;
+      --bg-light: #1f2937;
+      --bg-dark: #374151;
+      --border-color: #374151;
+      --code-bg: #1a1a1a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--text-color);
+      line-height: 1.6;
+      background-color: var(--bg-color);
+    }
+
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--header-height);
+      background-color: var(--bg-color);
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      padding: 0 1.5rem;
+      z-index: 100;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--text-color);
+    }
+
+    .logo svg {
+      margin-right: 0.5rem;
+      color: var(--primary-color);
+    }
+
+    .search-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .search-box {
+      width: 100%;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      border: 1px solid var(--border-color);
+      background-color: var(--bg-light);
+      font-size: 0.875rem;
+      color: var(--text-color);
+    }
+
+    .search-box:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+    }
+
+    .theme-toggle {
+      margin-left: 1rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--text-light);
+    }
+
+    .container {
+      display: flex;
+      margin-top: var(--header-height);
+      min-height: calc(100vh - var(--header-height));
+    }
+
+    .sidebar {
+      width: var(--sidebar-width);
+      background-color: var(--bg-light);
+      border-right: 1px solid var(--border-color);
+      overflow-y: auto;
+      position: fixed;
+      top: var(--header-height);
+      bottom: 0;
+      left: 0;
+      padding: 1.5rem 0;
+    }
+
+    .sidebar-section {
+      margin-bottom: 1.5rem;
+    }
+
+    .sidebar-heading {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--text-light);
+      padding: 0 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .sidebar-links {
+      list-style: none;
+    }
+
+    .sidebar-link {
+      display: block;
+      padding: 0.5rem 1.5rem;
+      color: var(--text-color);
+      font-size: 0.875rem;
+      transition: background-color 0.2s;
+    }
+
+    .sidebar-link:hover {
+      background-color: var(--bg-dark);
+      text-decoration: none;
+    }
+
+    .sidebar-link.active {
+      background-color: var(--bg-dark);
+      border-left: 3px solid var(--primary-color);
+      font-weight: 600;
+    }
+
+    .main-content {
+      flex: 1;
+      margin-left: var(--sidebar-width);
+      padding: 2rem;
+      max-width: 900px;
+    }
+
+    .module-section {
+      margin-bottom: 3rem;
+      scroll-margin-top: calc(var(--header-height) + 1rem);
+    }
+
+    .module-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .module-description {
+      margin-bottom: 2rem;
+      color: var(--text-light);
+    }
+
+    .function-section {
+      margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .function-section:last-child {
+      border-bottom: none;
+    }
+
+    .function-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .function-name {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+
+    .function-signature {
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      background-color: var(--bg-light);
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.25rem;
+      margin-left: 1rem;
+      color: var(--text-light);
+    }
+
+    .function-description {
+      margin-bottom: 1.5rem;
+    }
+
+    .params-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.5rem;
+    }
+
+    .params-table th,
+    .params-table td {
+      padding: 0.75rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .params-table th {
+      font-weight: 600;
+      background-color: var(--bg-light);
+    }
+
+    .param-name {
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+    }
+
+    .param-type {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--primary-dark);
+    }
+
+    .example-section {
+      margin-top: 1.5rem;
+    }
+
+    .example-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    pre {
+      background-color: var(--code-bg);
+      border-radius: 0.5rem;
+      padding: 1rem;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+
+    code {
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+    }
+
+    .output-section {
+      background-color: var(--bg-light);
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .output-title {
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--text-light);
+    }
+
+    .output-content {
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background-color: var(--primary-color);
+      color: white;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: background-color 0.2s;
+      z-index: 99;
+    }
+
+    .back-to-top:hover {
+      background-color: var(--primary-dark);
+    }
+
+    .hero-section {
+      background-color: var(--bg-light);
+      border-radius: 0.5rem;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .hero-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.375rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .hero-button-primary {
+      background-color: var(--primary-color);
+      color: white;
+    }
+
+    .hero-button-primary:hover {
+      background-color: var(--primary-dark);
+      text-decoration: none;
+    }
+
+    .hero-button-secondary {
+      background-color: var(--bg-dark);
+      color: var(--text-color);
+    }
+
+    .hero-button-secondary:hover {
+      background-color: var(--border-color);
+      text-decoration: none;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .feature-card {
+      background-color: var(--bg-light);
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 0.5rem;
+      background-color: var(--primary-light);
+      color: var(--primary-dark);
+      margin-bottom: 1rem;
+    }
+
+    .feature-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .feature-description {
+      color: var(--text-light);
+      font-size: 0.875rem;
+    }
+
+    .toc {
+      position: sticky;
+      top: calc(var(--header-height) + 2rem);
+      max-height: calc(100vh - var(--header-height) - 4rem);
+      overflow-y: auto;
+      padding-left: 1rem;
+      margin-bottom: 2rem;
+      font-size: 0.875rem;
+    }
+
+    .toc-title {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .toc-list {
+      list-style: none;
+      padding-left: 0.5rem;
+    }
+
+    .toc-item {
+      margin-bottom: 0.25rem;
+    }
+
+    .toc-link {
+      color: var(--text-light);
+      transition: color 0.2s;
+    }
+
+    .toc-link:hover {
+      color: var(--primary-color);
+    }
+
+    .toc-link.active {
+      color: var(--primary-color);
+      font-weight: 500;
+    }
+
+    .function-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 9999px;
+      background-color: var(--secondary-color);
+      color: white;
+      margin-left: 0.5rem;
+    }
+
+    .version-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 9999px;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      margin-left: auto;
+    }
+
+    .changelog-item {
+      margin-bottom: 1.5rem;
+    }
+
+    .changelog-version {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .changelog-date {
+      font-size: 0.875rem;
+      color: var(--text-light);
+      margin-bottom: 1rem;
+    }
+
+    .changelog-list {
+      list-style: none;
+      margin-left: 1rem;
+    }
+
+    .changelog-list li {
+      margin-bottom: 0.5rem;
+      position: relative;
+    }
+
+    .changelog-list li::before {
+      content: "";
+      position: absolute;
+      left: -1rem;
+      top: 0.6rem;
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+      background-color: var(--primary-color);
+    }
+
+    .faq-item {
+      margin-bottom: 1.5rem;
+    }
+
+    .faq-question {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--primary-color);
+    }
+
+    .faq-answer {
+      color: var(--text-color);
+    }
+
+    .module-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .module-nav-item {
+      padding: 0.5rem 1rem;
+      border-radius: 0.375rem;
+      background-color: var(--bg-light);
+      color: var(--text-color);
+      font-size: 0.875rem;
+      transition: all 0.2s;
+    }
+
+    .module-nav-item:hover {
+      background-color: var(--primary-light);
+      color: var(--primary-dark);
+      text-decoration: none;
+    }
+
+    .module-nav-item.active {
+      background-color: var(--primary-color);
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+      }
+
+      .sidebar.open {
+        transform: translateX(0);
+      }
+
+      .main-content {
+        margin-left: 0;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin-right: 1rem;
+    }
+
+    .code-tabs {
+      margin-bottom: 1rem;
+    }
+
+    .code-tab-list {
+      display: flex;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 1rem;
+    }
+
+    .code-tab {
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      font-size: 0.875rem;
+    }
+
+    .code-tab.active {
+      border-bottom-color: var(--primary-color);
+      font-weight: 500;
+    }
+
+    .code-tab-content {
+      display: none;
+    }
+
+    .code-tab-content.active {
+      display: block;
+    }
+
+    .method-list {
+      list-style: none;
+      margin-bottom: 1.5rem;
+    }
+
+    .method-list-item {
+      margin-bottom: 0.5rem;
+      padding: 0.5rem;
+      border-radius: 0.25rem;
+      transition: background-color 0.2s;
+    }
+
+    .method-list-item:hover {
+      background-color: var(--bg-light);
+    }
+
+    .method-name {
+      font-family: var(--font-mono);
+      font-weight: 500;
+      color: var(--primary-color);
+    }
+
+    .method-description {
+      font-size: 0.875rem;
+      color: var(--text-light);
+      margin-top: 0.25rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <button class="menu-toggle" aria-label="Toggle menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+    <a href="#" class="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+      </svg>
+      Tiny Utils
+    </a>
+    <div class="search-container">
+      <input type="text" class="search-box" placeholder="Search documentation...">
+    </div>
+    <button class="theme-toggle" aria-label="Toggle theme">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+    </button>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <h3 class="sidebar-heading">Getting Started</h3>
+        <ul class="sidebar-links">
+          <li><a href="#introduction" class="sidebar-link active">Introduction</a></li>
+          <li><a href="#installation" class="sidebar-link">Installation</a></li>
+          <li><a href="#usage" class="sidebar-link">Usage</a></li>
+          <li><a href="#features" class="sidebar-link">Features</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h3 class="sidebar-heading">Modules</h3>
+        <ul class="sidebar-links">
+          <li><a href="#array" class="sidebar-link">Array</a></li>
+          <li><a href="#object" class="sidebar-link">Object</a></li>
+          <li><a href="#string" class="sidebar-link">String</a></li>
+          <li><a href="#date" class="sidebar-link">Date</a></li>
+          <li><a href="#number" class="sidebar-link">Number</a></li>
+          <li><a href="#web" class="sidebar-link">Web</a></li>
+          <li><a href="#logger" class="sidebar-link">Logger</a></li>
+          <li><a href="#validation" class="sidebar-link">Validation</a></li>
+          <li><a href="#storage" class="sidebar-link">Storage</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h3 class="sidebar-heading">More</h3>
+        <ul class="sidebar-links">
+          <li><a href="#examples" class="sidebar-link">Examples</a></li>
+          <li><a href="#faq" class="sidebar-link">FAQ</a></li>
+          <li><a href="#changelog" class="sidebar-link">Changelog</a></li>
+          <li><a href="#contributing" class="sidebar-link">Contributing</a></li>
+          <li><a href="#license" class="sidebar-link">License</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <section id="introduction" class="module-section">
+        <div class="hero-section">
+          <h1 class="hero-title">Tiny Utils</h1>
+          <p class="hero-subtitle">A lightweight, zero-dependency utility library for JavaScript and TypeScript</p>
+          <div class="hero-buttons">
+            <a href="#installation" class="hero-button hero-button-primary">Get Started</a>
+            <a href="https://github.com/username/tiny-utils" class="hero-button hero-button-secondary">GitHub</a>
+          </div>
+          <div class="version-badge">v0.1.0</div>
+        </div>
+
+        <p class="module-description">
+          Tiny Utils is a comprehensive collection of utility functions designed to make JavaScript and TypeScript development easier and more efficient. With zero dependencies and a tiny footprint, it provides a wide range of helper functions for working with arrays, objects, dates, strings, web functionality, and more.
+        </p>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h3 class="feature-title">Dual Format Support</h3>
+            <p class="feature-description">Works with both ESM and CommonJS, making it compatible with any JavaScript or TypeScript project.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path>
+                <line x1="16" y1="8" x2="2" y2="22"></line>
+                <line x1="17.5" y1="15" x2="9" y2="15"></line>
+              </svg>
+            </div>
+            <h3 class="feature-title">Tree-Shakable</h3>
+            <p class="feature-description">Import only what you need, reducing bundle size and improving performance.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="4 17 10 11 4 5"></polyline>
+                <line x1="12" y1="19" x2="20" y2="19"></line>
+              </svg>
+            </div>
+            <h3 class="feature-title">Type-Safe</h3>
+            <p class="feature-description">Full TypeScript support with detailed type definitions for a better development experience.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+            </div>
+            <h3 class="feature-title">Modular</h3>
+            <p class="feature-description">Organized into logical categories, making it easy to find and use the functions you need.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                <line x1="7" y1="7" x2="7.01" y2="7"></line>
+              </svg>
+            </div>
+            <h3 class="feature-title">Lightweight</h3>
+            <p class="feature-description">Zero dependencies and a tiny footprint, keeping your project lean and efficient.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                <line x1="15" y1="9" x2="15.01" y2="9"></line>
+              </svg>
+            </div>
+            <h3 class="feature-title">Intuitive API</h3>
+            <p class="feature-description">Simple and consistent function naming, making the library easy to learn and use.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="installation" class="module-section">
+        <h2 class="module-title">Installation</h2>
+        <p class="module-description">
+          Install Tiny Utils using your favorite package manager.
+        </p>
+
+        <div class="code-tabs">
+          <div class="code-tab-list">
+            <div class="code-tab active" data-tab="npm">npm</div>
+            <div class="code-tab" data-tab="yarn">yarn</div>
+            <div class="code-tab" data-tab="pnpm">pnpm</div>
+          </div>
+          <div class="code-tab-content active" data-tab="npm">
+            <pre><code class="language-bash">npm install tiny-utils</code></pre>
+          </div>
+          <div class="code-tab-content" data-tab="yarn">
+            <pre><code class="language-bash">yarn add tiny-utils</code></pre>
+          </div>
+          <div class="code-tab-content" data-tab="pnpm">
+            <pre><code class="language-bash">pnpm add tiny-utils</code></pre>
+          </div>
+        </div>
+
+        <p>
+          After installation, you can import the library in your project and start using its functions.
+        </p>
+      </section>
+
+      <section id="usage" class="module-section">
+        <h2 class="module-title">Usage</h2>
+        <p class="module-description">
+          Tiny Utils supports both ESM and CommonJS imports, allowing you to use it in any JavaScript or TypeScript project.
+        </p>
+
+        <div class="function-section">
+          <h3>With ESM (ES Modules)</h3>
+          <div class="example-section">
+            <pre><code class="language-javascript">// Import everything
+import * as utils from 'tiny-utils';
+
+// Import specific namespace
+import { array, string } from 'tiny-utils';
+
+// Import specific functions (tree-shaking friendly)
+import { unique, shuffle } from 'tiny-utils/array';
+import { formatDate } from 'tiny-utils/date';</code></pre>
+          </div>
+        </div>
+
+        <div class="function-section">
+          <h3>With CommonJS</h3>
+          <div class="example-section">
+            <pre><code class="language-javascript">// Import everything
+const utils = require('tiny-utils');
+
+// Import specific namespace
+const { array, string } = require('tiny-utils');
+
+// Import specific modules
+const arrayUtils = require('tiny-utils/array');
+const dateUtils = require('tiny-utils/date');</code></pre>
+          </div>
+        </div>
+
+        <div class="function-section">
+          <h3>TypeScript Usage</h3>
+          <p>
+            Tiny Utils comes with full TypeScript support. All functions are properly typed, providing excellent IDE autocompletion and type checking.
+          </p>
+          <div class="example-section">
+            <pre><code class="language-typescript">import { sortBy } from 'tiny-utils/array';
+
+interface User {
+  id: number;
+  name: string;
+  age: number;
+}
+
+const users: User[] = [
+  { id: 1, name: 'John', age: 30 },
+  { id: 2, name: 'Alice', age: 25 },
+  { id: 3, name: 'Bob', age: 40 }
+];
+
+// TypeScript knows that sortedUsers is User[]
+const sortedUsers = sortBy(users, 'age');
+console.log(sortedUsers);</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="module-section">
+        <h2 class="module-title">Features</h2>
+        <p class="module-description">
+          Tiny Utils provides a comprehensive set of utility functions organized into logical categories.
+        </p>
+
+        <div class="module-nav">
+          <a href="#array" class="module-nav-item">Array</a>
+          <a href="#object" class="module-nav-item">Object</a>
+          <a href="#string" class="module-nav-item">String</a>
+          <a href="#date" class="module-nav-item">Date</a>
+          <a href="#number" class="module-nav-item">Number</a>
+          <a href="#web" class="module-nav-item">Web</a>
+          <a href="#logger" class="module-nav-item">Logger</a>
+          <a href="#validation" class="module-nav-item">Validation</a>
+          <a href="#storage" class="module-nav-item">Storage</a>
+        </div>
+
+        <div class="function-section">
+          <h3>Key Benefits</h3>
+          <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem;">
+            <li><strong>Comprehensive:</strong> Over 80 utility functions covering common programming tasks</li>
+            <li><strong>Consistent API:</strong> All functions follow the same naming and parameter conventions</li>
+            <li><strong>Well Documented:</strong> Detailed documentation with examples for every function</li>
+            <li><strong>Tested:</strong> Thoroughly tested to ensure reliability and correctness</li>
+            <li><strong>Modern:</strong> Built with modern JavaScript features and best practices</li>
+            <li><strong>Flexible:</strong> Use only what you need, when you need it</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="array" class="module-section">
+        <h2 class="module-title">Array Utilities</h2>
+        <p class="module-description">
+          Functions for manipulating and transforming arrays. These utilities help you work with arrays more efficiently, handling common tasks like filtering, sorting, grouping, and transforming array data.
+        </p>
+
+        <div class="method-list">
+          <div class="method-list-item">
+            <span class="method-name">chunk(array, size)</span>
+            <p class="method-description">Splits an array into chunks of specified size</p>
+          </div>
+          <div class="method-list-item">
+            <span class="method-name">unique(array)</span>
+            <p class="method-description">Returns a new array with duplicate values removed</p>
+          </div>
+          <div class="method-list-item">
+            <span class="method-name">shuffle(array)</span>
+            <p class="method-description">Returns a new array with elements randomly reordered</p>
+          </div>
+          <div class="method-list-item">
+            <span class="method-name">difference(array, values)</span>
+            <p class="method-description">Returns values from the first array that are not in the second array</p>
+          </div>
+          <div class="method-list-item">
+            <span class="method-name">groupBy(array, iteratee)</span>
+            <p class="method-description">Groups array elements by a key returned by the iteratee function</p>
+          </div>
+          <div class="method-list-item">
+            <span class="method-name">intersection(array, values)</span>
+            <p class="method-description">Returns an array of values that are in both arrays</p>
+          </div>
+          <div class="method-list-item">
+            <span class="method-name">flatten(array)</span>
+            <p class="method-description">Flattens an array a single level deep</p>
+          </div>
+          <div class="method-list-item">
+            <span class="method-name">first(array)</span>
+            <p class="method-description">Gets the first element of an array</p>
+          </div>
+          <div class="method-list-item">
+            <span class="method-name">last(array)</span>
+            <p class="method-description">Gets the last element of an array</p>
+          </div>
+          <div class="method-list-item">
+            <span class="method-name">keyBy(array, iteratee)</span>
+            <p class="method-description">Creates an object composed of keys generated from the results of running each element through iteratee</p>
+          </div>
+          <div class="method-list-item">
+            <span class="method-name">sortBy(array, key, order)</span>
+            <p class="method-description">Sorts an array of objects by a property or function</p>
+          </div>
+          <div class="method-list-item">
+            <span class="method-name">count(array)</span>
+            <p class="method-description">Counts occurrences of each value in an array</p>
+          </div>
+          <div class="method-list-item">
+            <span class="method-name">partition(array, predicate)</span>
+            <p class="method-description">Partitions elements into two groups according to a predicate</p>
+          </div>
+          <div class="method-list-item">
+            <span class="method-name">sample(array)</span>
+            <p class="method-description">Samples a single random element from an array</p>
+          </div>
+        </div>
+
+        <div class="function-section">
+          <div class="function-header">
+            <h3 class="function-name">chunk</h3>
+            <span class="function-signature">chunk(array, size)</span>
+          </div>
+          <p class="function-description">
+            Splits an array into chunks of specified size. This is useful when you need to process arrays in smaller batches or display data in a grid layout.
+          </p>
+
+          <table class="params-table">
+            <thead>
+              <tr>
+                <th>Parameter</th>
+                <th>Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="param-name">array</td>
+                <td class="param-type">T[]</td>
+                <td>The array to chunk</td>
+              </tr>
+              <tr>
+                <td class="param-name">size</td>
+                <td class="param-type">number</td>
+                <td>The size of each chunk</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="example-section">
+            <h4 class="example-title">Example</h4>
+            <pre><code class="language-javascript">import { chunk } from 'tiny-utils/array';
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+const chunked = chunk(numbers, 3);</code></pre>
+
+            <div class="output-section">
+              <h4 class="output-title">Output</h4>
+              <div class="output-content">[[1, 2, 3], [4, 5, 6], [7, 8]]</div>
+            </div>
+          </div>
+
+          <div class="example-section">
+            <h4 class="example-title">Real-world Example: Pagination</h4>
+            <pre><code class="language-javascript">import { chunk } from 'tiny-utils/array';
+
+// Simulating a list of items to paginate
+const allItems = [
+  { id: 1, name: 'Item 1' },
+  { id: 2, name: 'Item 2' },
+  // ... more items
+  { id: 20, name: 'Item 20' }
+];
+
+// Split into pages of 5 items each
+const itemsByPage = chunk(allItems, 5);
+
+// Get items for page 2 (0-indexed)
+const page2Items = itemsByPage[1];
+console.log(page2Items); // Items 6-10</code></pre>
+          </div>
+        </div>
+
+        <div class="function-section">
+          <div class="function-header">
+            <h3 class="function-name">unique</h3>
+            <span class="function-signature">unique(array)</span>
+          </div>
+          <p class="function-description">
+            Returns a new array with duplicate values removed. This is useful for filtering out duplicate entries from a list.
+          </p>
+
+          <table class="params-table">
+            <thead>
+              <tr>
+                <th>Parameter</th>
+                <th>Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="param-name">array</td>
+                <td class="param-type">T[]</td>
+                <td>The array to process</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="example-section">
+            <h4 class="example-title">Example</h4>
+            <pre><code class="language-javascript">import { unique } from 'tiny-utils/array';
+
+const withDuplicates = [1, 2, 2, 3, 4, 4, 5];
+const uniqueValues = unique(withDuplicates);</code></pre>
+
+            <div class="output-section">
+              <h4 class="output-title">Output</h4>
+              <div class="output-content">[1, 2, 3, 4, 5]</div>
+            </div>
+          </div>
+
+          <div class="example-section">
+            <h4 class="example-title">Real-world Example: Filtering Tags</h4>
+            <pre><code class="language-javascript">import { unique } from 'tiny-utils/array';
+
+// A list of blog posts with tags
+const posts = [
+  { id: 1, title: 'Post 1', tags: ['javascript', 'react', 'tutorial'] },
+  { id: 2, title: 'Post 2', tags: ['javascript', 'node', 'api'] },
+  { id: 3, title: 'Post 3', tags: ['react', 'tutorial', 'hooks'] }
+];
+
+// Extract all tags and remove duplicates
+const allTags = unique(posts.flatMap(post => post.tags));
+console.log(allTags); // ['javascript', 'react', 'tutorial', 'node', 'api', 'hooks']</code></pre>
+          </div>
+        </div>
+
+        <!-- More array functions would go here -->
+      </section>
+
+      <section id="object" class="module-section">
+        <h2 class="module-title">Object Utilities</h2>
+        <p class="module-description">
+          Functions for working with objects efficiently. These utilities help you manipulate, transform, and analyze JavaScript objects with ease.
+        </p>
+
+        <div class="method-list">
+          <div class="method-list-item">
+            <span class="method-name">pick(obj, keys)</span>
+            <p class="method-description">Creates an object with only the specified keys</p>
+          </div>
+          <div class="method-list-item">
+            <span class="method-name">omit(obj, keys)</span>
+            <p class="method-description">Creates an object without the specified keys</p>
+          </div>
+          <div class="method-list-item">
+            <span class="method-name">deepMerge(target, source)</span>
+            <p class="method-description">Deeply merges two objects</p>
+          </div>
+          <div class="method-list-item">
+            <span class="method-name">isObject(item)</span>
+            <p class="method-description">Checks if a value is an object</p>
+          </div>
+          <div class="method-list-item">
+            <span class="method-name">deepClone(obj)</span>
+            <p class="method-description">Creates a deep clone of an object</p>
+          </div>
+          <div class="method-list-item">
+            <span class="method-name">flattenObject(obj, prefix)</span>
+            <p class="method-description">Flattens a nested object structure</p>
+          </div>
+          <div class="method-list-item">
+            <span class="method-name">isEmpty(obj)</span>
+            <p class="method-description">Checks if an object is empty</p>
+          </div>
+          <div class="method-list-item">
+            <span class="method-name">mapValues(obj, fn)</span>
+            <p class="method-description">Maps values in an object</p>
+          </div>
+          <div class="method-list-item">
+            <span class="method-name">toPairs(obj)</span>
+            <p class="method-description">Converts an object to [key, value] pairs</p>
+          </div>
+          <div class="method-list-item">
+            <span class="method-name">fromPairs(pairs)</span>
+            <p class="method-description">Converts an array of [key, value] pairs to an object</p>
+          </div>
+          <div class="method-list-item">
+            <span class="method-name">isEqual(objA, objB)</span>
+            <p class="method-description">Performs a deep equality check between two objects</p>
+          </div>
+        </div>
+
+        <div class="function-section">
+          <div class="function-header">
+            <h3 class="function-name">pick</h3>
+            <span class="function-signature">pick(obj, keys)</span>
+          </div>
+          <p class="function-description">
+            Creates an object with only the specified keys. This is useful for extracting a subset of properties from an object, such as creating a public version of a user object without sensitive information.
+          </p>
+
+          <table class="params-table">
+            <thead>
+              <tr>
+                <th>Parameter</th>
+                <th>Type</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="param-name">obj</td>
+                <td class="param-type">T</td>
+                <td>The source object</td>
+              </tr>
+              <tr>
+                <td class="param-name">keys</td>
+                <td class="param-type">K[]</td>
+                <td>Array of keys to pick</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="example-section">
+            <h4 class="example-title">Example</h4>
+            <pre><code class="language-javascript">import { pick } from 'tiny-utils/object';
+
+const user = {
+  id: 1,
+  name: 'John',
+  email: 'john@example.com',
+  password: 'secret'
+};
+
+const publicUser = pick(user, ['id', 'name']);</code></pre>
+
+            <div class="output-section">
+              <h4 class="output-title">Output</h4>
+              <div class="output-content">{ id: 1, name: 'John' }</div>
+            </div>
+          </div>
+
+          <div class="example-section">
+            <h4 class="example-title">Real-world Example: API Response Filtering</h4>
+            <pre><code class="language-javascript">import { pick } from 'tiny-utils/object';
+
+// Function to handle user data from an API
+function processUserData(userData) {
+  // Only keep the fields we need for our application
+  return pick(userData, ['id', 'name', 'email', 'role', 'lastLogin']);
+}
+
+// Example API response with many fields
+const apiResponse = {
+  id: 123,
+  name: 'Jane Smith',
+  email: 'jane@example.com',
+  password: 'hashed_password',
+  role: 'admin',
+  lastLogin: '2023-01-15T14:30:45Z',
+  createdAt: '2022-05-10T09:20:30Z',
+  updatedAt: '2023-01-15T14:30:45Z',
+  securityQuestions: [...],
+  preferences: {...},
+  // ... many more fields
+};
+
+const processedUser = processUserData(apiResponse);
+console.log(processedUser);
+// { id: 123, name: 'Jane Smith', email: 'jane@example.com', role: 'admin', lastLogin: '2023-01-15T14:30:45Z' }</code></pre>
+          </div>
+        </div>
+
+        <!-- More object functions would go here -->
+      </section>
+
+      <!-- Additional module sections would go here -->
+
+      <section id="examples" class="module-section">
+        <h2 class="module-title">Examples</h2>
+        <p class="module-description">
+          Here are some real-world examples of how to use Tiny Utils in your projects.
+        </p>
+
+        <div class="function-section">
+          <h3>Data Processing</h3>
+          <div class="example-section">
+            <pre><code class="language-javascript">import { groupBy, sortBy } from 'tiny-utils/array';
+import { formatDate } from 'tiny-utils/date';
+
+// Sample data
+const sales = [
+  { id: 1, product: 'Laptop', category: 'Electronics', price: 1200, date: new Date('2023-01-15') },
+  { id: 2, product: 'Headphones', category: 'Electronics', price: 100, date: new Date('2023-01-20') },
+  { id: 3, product: 'Book', category: 'Books', price: 20, date: new Date('2023-01-10') },
+  { id: 4, product: 'Smartphone', category: 'Electronics', price: 800, date: new Date('2023-01-05') },
+  { id: 5, product: 'Desk Chair', category: 'Furniture', price: 250, date: new Date('2023-01-25') }
+];
+
+// Group sales by category
+const salesByCategory = groupBy(sales, item => item.category);
+console.log(salesByCategory);
+/*
+{
+  "Electronics": [
+    { id: 1, product: 'Laptop', category: 'Electronics', price: 1200, date: [Date] },
+    { id: 2, product: 'Headphones', category: 'Electronics', price: 100, date: [Date] },
+    { id: 4, product: 'Smartphone', category: 'Electronics', price: 800, date: [Date] }
+  ],
+  "Books": [
+    { id: 3, product: 'Book', category: 'Books', price: 20, date: [Date] }
+  ],
+  "Furniture": [
+    { id: 5, product: 'Desk Chair', category: 'Furniture', price: 250, date: [Date] }
+  ]
+}
+*/
+
+// Sort sales by date
+const sortedSales = sortBy(sales, 'date');
+console.log(sortedSales.map(sale => ({
+  ...sale,
+  date: formatDate(sale.date, 'YYYY-MM-DD')
+})));
+/*
+[
+  { id: 4, product: 'Smartphone', category: 'Electronics', price: 800, date: '2023-01-05' },
+  { id: 3, product: 'Book', category: 'Books', price: 20, date: '2023-01-10' },
+  { id: 1, product: 'Laptop', category: 'Electronics', price: 1200, date: '2023-01-15' },
+  { id: 2, product: 'Headphones', category: 'Electronics', price: 100, date: '2023-01-20' },
+  { id: 5, product: 'Desk Chair', category: 'Furniture', price: 250, date: '2023-01-25' }
+]
+*/</code></pre>
+          </div>
+        </div>
+
+        <div class="function-section">
+          <h3>Form Validation</h3>
+          <div class="example-section">
+            <pre><code class="language-javascript">import { isEmail, isUrl, isEmpty, hasLengthBetween } from 'tiny-utils/validation';
+
+function validateForm(formData) {
+  const errors = {};
+
+  // Check if name is provided and has correct length
+  if (isEmpty(formData.name)) {
+    errors.name = 'Name is required';
+  } else if (!hasLengthBetween(formData.name, 2, 50)) {
+    errors.name = 'Name must be between 2 and 50 characters';
+  }
+
+  // Validate email
+  if (isEmpty(formData.email)) {
+    errors.email = 'Email is required';
+  } else if (!isEmail(formData.email)) {
+    errors.email = 'Please enter a valid email address';
+  }
+
+  // Validate website if provided
+  if (formData.website && !isUrl(formData.website)) {
+    errors.website = 'Please enter a valid URL';
+  }
+
+  return {
+    isValid: Object.keys(errors).length === 0,
+    errors
+  };
+}
+
+// Example usage
+const formData = {
+  name: 'Jo',
+  email: 'not-an-email',
+  website: 'example'
+};
+
+const validation = validateForm(formData);
+console.log(validation);
+/*
+{
+  isValid: false,
+  errors: {
+    name: 'Name must be between 2 and 50 characters',
+    email: 'Please enter a valid email address',
+    website: 'Please enter a valid URL'
+  }
+}
+*/</code></pre>
+          </div>
+        </div>
+
+        <div class="function-section">
+          <h3>Working with Local Storage</h3>
+          <div class="example-section">
+            <pre><code class="language-javascript">import { createNamespacedStorage } from 'tiny-utils/storage';
+
+// Create a namespaced storage for user preferences
+const prefsStorage = createNamespacedStorage('user-prefs');
+
+// Save user preferences
+function savePreferences(preferences) {
+  prefsStorage.set('theme', preferences.theme);
+  prefsStorage.set('fontSize', preferences.fontSize);
+  prefsStorage.set('notifications', preferences.notifications);
+}
+
+// Load user preferences
+function loadPreferences() {
+  return {
+    theme: prefsStorage.get('theme', 'light'),
+    fontSize: prefsStorage.get('fontSize', 'medium'),
+    notifications: prefsStorage.get('notifications', true)
+  };
+}
+
+// Example usage
+savePreferences({
+  theme: 'dark',
+  fontSize: 'large',
+  notifications: false
+});
+
+const userPrefs = loadPreferences();
+console.log(userPrefs);
+// { theme: 'dark', fontSize: 'large', notifications: false }</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="module-section">
+        <h2 class="module-title">Frequently Asked Questions</h2>
+        <p class="module-description">
+          Common questions about Tiny Utils and their answers.
+        </p>
+
+        <div class="faq-item">
+          <h3 class="faq-question">What makes Tiny Utils different from other utility libraries?</h3>
+          <p class="faq-answer">
+            Tiny Utils is designed to be lightweight, modular, and tree-shakable. Unlike larger utility libraries, it focuses on providing only the most essential functions with zero dependencies. It also offers full TypeScript support and dual ESM/CommonJS compatibility, making it suitable for any modern JavaScript project.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">Can I use Tiny Utils with React, Vue, or other frameworks?</h3>
+          <p class="faq-answer">
+            Yes, Tiny Utils is framework-agnostic and can be used with any JavaScript framework or library. It provides pure utility functions that work with standard JavaScript data structures, making it compatible with React, Vue, Angular, Svelte, or any other framework.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">How does tree-shaking work with Tiny Utils?</h3>
+          <p class="faq-answer">
+            Tiny Utils is designed with tree-shaking in mind. When you import specific functions (e.g., <code>import { unique } from 'tiny-utils/array'</code>), modern bundlers like webpack, Rollup, or esbuild will only include the code for those specific functions in your final bundle, reducing the overall size.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">Is Tiny Utils suitable for production use?</h3>
+          <p class="faq-answer">
+            Yes, Tiny Utils is thoroughly tested and designed for production use. It follows best practices for performance, security, and reliability. The library is also actively maintained and updated to ensure compatibility with the latest JavaScript features and environments.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 class="faq-question">How can I contribute to Tiny Utils?</h3>
+          <p class="faq-answer">
+            Contributions are welcome! You can contribute by submitting bug reports, feature requests, or pull requests on the GitHub repository. Please see the <a href="#contributing">Contributing</a> section for more details.
+          </p>
+        </div>
+      </section>
+
+      <section id="changelog" class="module-section">
+        <h2 class="module-title">Changelog</h2>
+        <p class="module-description">
+          Track the changes and updates to Tiny Utils.
+        </p>
+
+        <div class="changelog-item">
+          <h3 class="changelog-version">v0.1.0</h3>
+          <p class="changelog-date">January 15, 2023</p>
+          <ul class="changelog-list">
+            <li>Initial release with core utility functions</li>
+            <li>Added array, object, string, date, and web modules</li>
+            <li>Added logger, validation, and storage modules</li>
+            <li>Full TypeScript support</li>
+            <li>Dual ESM/CommonJS compatibility</li>
+            <li>Comprehensive documentation</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contributing" class="module-section">
+        <h2 class="module-title">Contributing</h2>
+        <p class="module-description">
+          Contributions are welcome! Feel free to open issues and pull requests.
+        </p>
+
+        <div class="function-section">
+          <h3>How to Contribute</h3>
+          <ol style="margin-left: 1.5rem; margin-bottom: 1.5rem;">
+            <li>Fork the repository</li>
+            <li>Create your feature branch: <code>git checkout -b feature/amazing-feature</code></li>
+            <li>Commit your changes: <code>git commit -m 'Add some amazing feature'</code></li>
+            <li>Push to the branch: <code>git push origin feature/amazing-feature</code></li>
+            <li>Open a Pull Request</li>
+          </ol>
+
+          <h3>Development Setup</h3>
+          <pre><code class="language-bash"># Clone your fork
+git clone https://github.com/your-username/tiny-utils.git
+cd tiny-utils
+
+# Install dependencies
+npm install
+
+# Run tests
+npm test
+
+# Build the library
+npm run build</code></pre>
+
+          <h3>Code Style</h3>
+          <p>
+            We use ESLint and Prettier to maintain code quality and consistency. Please make sure your code passes the linting checks before submitting a pull request.
+          </p>
+
+          <pre><code class="language-bash"># Run linting
+npm run lint
+
+# Format code
+npm run format</code></pre>
+        </div>
+      </section>
+
+      <section id="license" class="module-section">
+        <h2 class="module-title">License</h2>
+        <p class="module-description">
+          This project is licensed under the MIT License - see the LICENSE file for details.
+        </p>
+
+        <div class="function-section">
+          <pre><code class="language-text">MIT License
+
+Copyright (c) 2025 Utilities
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</code></pre>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <button class="back-to-top" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <script>
+    // Simple sidebar toggle for mobile
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+      document.querySelector('.sidebar').classList.toggle('open');
+    });
+
+    // Back to top button
+    const backToTopButton = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', function() {
+      if (window.pageYOffset > 300) {
+        backToTopButton.style.display = 'flex';
+      } else {
+        backToTopButton.style.display = 'none';
+      }
+    });
+
+    backToTopButton.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Highlight active sidebar link based on scroll position
+    const sections = document.querySelectorAll('.module-section');
+    const sidebarLinks = document.querySelectorAll('.sidebar-link');
+
+    window.addEventListener('scroll', function() {
+      let current = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= (sectionTop - 100)) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      sidebarLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // Theme toggle functionality
+    const themeToggle = document.querySelector('.theme-toggle');
+    themeToggle.addEventListener('click', function() {
+      document.body.classList.toggle('dark-theme');
+    });
+
+    // Code tabs functionality
+    const codeTabs = document.querySelectorAll('.code-tab');
+    codeTabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        const tabId = this.getAttribute('data-tab');
+        
+        // Remove active class from all tabs and content
+        document.querySelectorAll('.code-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.code-tab-content').forEach(c => c.classList.remove('active'));
+        
+        // Add active class to clicked tab and corresponding content
+        this.classList.add('active');
+        document.querySelector(`.code-tab-content[data-tab="${tabId}"]`).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
