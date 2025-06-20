@@ -109,7 +109,7 @@ const kazeDev = {
 
 <img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="30"> <em><b>I love to make friends. so don't hesitate to reach me!</b> :)</em>
 
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=KazeDevID&repo=awesome-project&theme=tokyonight&hide_border=true)](https://github.com/KazeDevID/awesome-project)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=KazeDevID&repo=wbot&theme=tokyonight&hide_border=true)](https://github.com/KazeDevID/awesome-project)
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=KazeDevID&repo=web-development&theme=tokyonight&hide_border=true)](https://github.com/KazeDevID/web-development)
 
 </div>
