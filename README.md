@@ -190,18 +190,6 @@ const kazeDev = {
 
 ---
 
-## 🎵 Currently Vibing To
-
-<div align="center">
-
-<img src="https://media.giphy.com/media/c20UV66B7zCWA/giphy.gif" width="50">
-  
-[![Spotify](https://spotify-recently-played-readme.vercel.app/api?user=kazedev&count=1&unique=true)](https://open.spotify.com/user/kazedev)
-
-</div>
-
----
-
 ## ☕ Support My Work
 
 <div align="center">
