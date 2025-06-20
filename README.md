@@ -4,26 +4,39 @@
 
 <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=440&lines=Full+Stack+Developer;Coffee+Enthusiast;Open+Source+Contributor;Always+Learning+New+Things!" alt="Typing SVG" />
 
+<img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="100"/>
+
 </div>
 
 ---
 
 ## 🚀 About Me
 
+<img align="right" alt="Coding" width="400" src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif">
+
 ```javascript
 const kazeDev = {
     location: "Indonesia 🇮🇩",
-    currentFocus: "Fake Developers",
+    currentFocus: "Fake Developer",
     hobbies: ["☕ Coffee", "💻 Coding", "🎮 Gaming", "📚 Learning"],
-    funFact: "I debug with console.log() and I'm not ashamed! 😄"
+    funFact: "I debug with console.log() and I'm not ashamed! 😄",
+    currentlyListening: "Lo-fi Hip Hop beats 🎵",
+    motto: "Code, Coffee, Repeat ☕"
 };
 ```
+
+<div align="center">
+  <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30">
+  <em><b>I love connecting with different people</b> so if you want to say <b>hi, I'll be happy to meet you more!</b> 😊</em>
+</div>
 
 ---
 
 ## 🛠️ Tech Stack & Tools
 
 <div align="center">
+
+<img src="https://media.giphy.com/media/SWoSkN6DxTszqIKEqv/giphy.gif" alt="Coder GIF" width="500">
 
 ### 🎨 Frontend
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
@@ -57,7 +70,10 @@ const kazeDev = {
 ## 📊 GitHub Statistics
 
 <div align="center">
-  
+
+<img src="https://media.giphy.com/media/iY8CRBdQXODJSCERIr/giphy.gif" width="30px">&nbsp;***My working tools...***
+<br><br>
+
 <table>
   <tr>
     <td>
@@ -78,8 +94,10 @@ const kazeDev = {
 ## 🏆 GitHub Profile Trophy
 
 <div align="center">
+
+<img src="https://media.giphy.com/media/J5B1Y8QZnzXXbLQIBu/giphy.gif" width="30"> ***Trophy Case*** <img src="https://media.giphy.com/media/J5B1Y8QZnzXXbLQIBu/giphy.gif" width="30">
   
-[![trophy](https://github-profile-trophy.vercel.app/?username=KazeDevID&theme=alduin)](https://github.com/ryo-ma/github-profile-trophy)
+[![trophy](https://github-profile-trophy.vercel.app/?username=KazeDevID&theme=tokyonight&no-frame=true&row=1&column=6)](https://github.com/ryo-ma/github-profile-trophy)
 
 </div>
 
@@ -89,8 +107,20 @@ const kazeDev = {
 
 <div align="center">
 
+<img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="30"> <em><b>I love to make friends. so don't hesitate to reach me!</b> :)</em>
+
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=KazeDevID&repo=awesome-project&theme=tokyonight&hide_border=true)](https://github.com/KazeDevID/awesome-project)
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=KazeDevID&repo=web-development&theme=tokyonight&hide_border=true)](https://github.com/KazeDevID/web-development)
+
+</div>
+
+---
+
+## 🐍 Contribution Snake
+
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/platane/platane/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" />
 
 </div>
 
@@ -99,8 +129,27 @@ const kazeDev = {
 ## 📈 Contribution Graph
 
 <div align="center">
+
+<img src="https://media.giphy.com/media/W5eoZHPpUx9sapR0eu/giphy.gif" width="30px" alt="Git"/>&nbsp;<i><b>Git Productivity</b></i>
   
 [![KazeDev's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=KazeDevID&theme=tokyo-night&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
+
+</div>
+
+---
+
+## 🎯 Current Focus
+
+<div align="center">
+
+<img src="https://media.giphy.com/media/VTtANKl0beDFQRLDTh/giphy.gif" width="40"> ***What I'm working on...*** <img src="https://media.giphy.com/media/VTtANKl0beDFQRLDTh/giphy.gif" width="40">
+
+- 🔭 I'm currently working on **full-stack web applications**
+- 🌱 I'm currently learning **cloud technologies and DevOps**
+- 👯 I'm looking to collaborate on **open source projects**
+- 🤔 I'm looking for help with **system design and architecture**
+- 💬 Ask me about **JavaScript, React, Node.js, and coffee!**
+- ⚡ Fun fact: **I can turn coffee into code!** ☕➡️💻
 
 </div>
 
@@ -109,6 +158,8 @@ const kazeDev = {
 ## 🤝 Connect With Me
 
 <div align="center">
+
+<img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="30"> <em><b>Let's connect and chat!</b></em>
 
 [![GitHub followers](https://img.shields.io/github/followers/KazeDevID?label=Follow&style=social)](https://github.com/KazeDevID)
 [![GitHub stars](https://img.shields.io/github/stars/KazeDevID?label=Stars&style=social)](https://github.com/KazeDevID)
@@ -130,6 +181,8 @@ const kazeDev = {
 ## 💭 Random Dev Quote
 
 <div align="center">
+
+<img src="https://media.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif" width="50">
   
 ![Quote](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight)
 
@@ -140,6 +193,8 @@ const kazeDev = {
 ## 🎵 Currently Vibing To
 
 <div align="center">
+
+<img src="https://media.giphy.com/media/c20UV66B7zCWA/giphy.gif" width="50">
   
 [![Spotify](https://spotify-recently-played-readme.vercel.app/api?user=kazedev&count=1&unique=true)](https://open.spotify.com/user/kazedev)
 
@@ -151,10 +206,23 @@ const kazeDev = {
 
 <div align="center">
 
-If you like my work and want to support me, consider buying me a coffee! ☕
+<img src="https://media.giphy.com/media/3oKIPnAiaMCws8nOsE/giphy.gif" width="50">
+
+**If you like my work and want to support me, consider buying me a coffee!** ☕
 
 [![Ko-Fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/kazedev)
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/kazedev)
+
+</div>
+
+---
+
+## 🔥 Weekly Development Breakdown
+
+<div align="center">
+
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
 
 </div>
 
@@ -167,6 +235,8 @@ If you like my work and want to support me, consider buying me a coffee! ☕
 
 ### 💫 Thanks for visiting my profile!
 
+<img src="https://media.giphy.com/media/jpVnC65DmYeyRL4LHS/giphy.gif" width="20%">
+
 <img src="https://raw.githubusercontent.com/Trilokia/Trilokia/379277808c61ef204768a61bbc5d25bc7798ccf1/bottom_header.svg" alt="Bottom Header" />
 
 </div>
@@ -174,3 +244,7 @@ If you like my work and want to support me, consider buying me a coffee! ☕
 ---
 
 ⭐️ From [KazeDevID](https://github.com/KazeDevID) with ❤️ and lots of ☕
+
+<div align="center">
+  <img src="https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif" width="100">
+</div>
