@@ -1,0 +1,44 @@
+name: Realtime Profile Sync
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+    paths:
+      - '.github/scripts/sync-profile.mjs'
+      - '.github/workflows/realtime-profile.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  sync-profile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Sync live GitHub profile telemetry
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node .github/scripts/sync-profile.mjs
+
+      - name: Commit updated profile artifacts
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md assets/hero-banner.svg assets/live-telemetry.svg
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: sync realtime GitHub profile telemetry [skip ci]"
+            git push
+          else
+            echo "No profile changes detected."
+          fi

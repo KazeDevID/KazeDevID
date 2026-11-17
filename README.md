@@ -1,228 +1,142 @@
 <div align="center">
-  
-# ☕ Hey there! I'm Kaze👋
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=440&lines=Full+Stack+Developer;Coffee+Enthusiast;Open+Source+Contributor;Always+Learning+New+Things!" alt="Typing SVG" />
+<a href="https://github.com/KazeDevID">
+  <img src="./assets/hero-banner.svg" alt="KazeDevID Hero Banner" width="100%" />
+</a>
 
-<img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="100"/>
+<br />
+
+<a href="https://git.io/typing-svg">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=15&duration=3200&pause=1100&color=38BDF8&center=true&vCenter=true&width=680&lines=Full-Stack+Engineer+%C2%B7+Protocol+%26+Automation+Architect;Creator+of+%40kazedevid%2Fkazewa+%26+baileys-rec;Shipping+TypeScript%2C+Rust%2C+Kotlin+%26+Real-Time+Systems" alt="Typing SVG" />
+</a>
+
+<p>
+  <a href="https://github.com/KazeDevID?tab=followers">
+    <img src="https://img.shields.io/github/followers/KazeDevID?label=Followers&style=flat-square&color=0EA5E9&labelColor=0D1117" alt="GitHub Followers" />
+  </a>
+  <a href="https://github.com/KazeDevID?tab=repositories">
+    <img src="https://img.shields.io/github/stars/KazeDevID?affiliations=OWNER&style=flat-square&color=38BDF8&labelColor=0D1117" alt="Total Stars" />
+  </a>
+  <a href="https://komarev.com/ghpvc/?username=KazeDevID">
+    <img src="https://komarev.com/ghpvc/?username=KazeDevID&label=Profile+Views&color=1E293B&style=flat-square" alt="Profile Views" />
+  </a>
+  <a href="https://lynk.id/kenalkaze">
+    <img src="https://img.shields.io/badge/Links-lynk.id%2Fkenalkaze-0F172A?style=flat-square&labelColor=0D1117" alt="Lynk Profile" />
+  </a>
+</p>
 
 </div>
 
 ---
 
-## 🚀 About Me
+### About
 
-<img align="right" alt="Coding" width="400" src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif">
-
-```javascript
-const kazeDev = {
-    location: "Indonesia 🇮🇩",
-    currentFocus: "Fake Developer",
-    hobbies: ["☕ Coffee", "💻 Coding", "🎮 Gaming", "📚 Learning"],
-    funFact: "I debug with console.log() and I'm not ashamed! 😄",
-    currentlyListening: "Lo-fi Hip Hop beats 🎵",
-    motto: "Code, Coffee, Repeat ☕"
+```ts
+const kazeDevID = {
+  name: "Kaze (マイケル)",
+  organization: "@X-SyntaxError",
+  location: "Indonesia",
+  focus: ["Messaging Protocol Libraries", "Full-Stack Web Apps", "Rust & Kotlin Systems"],
+  flagships: ["@kazedevid/kazewa", "baileys-rec", "weabot-rust", "telegix", "jadestream"],
+  links: "https://lynk.id/kenalkaze",
 };
 ```
 
+---
+
+### Realtime Telemetry
+
 <div align="center">
-  <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30">
-  <em><b>I love connecting with different people</b> so if you want to say <b>hi, I'll be happy to meet you more!</b> 😊</em>
+  <img src="./assets/live-telemetry.svg" alt="KazeDevID Realtime GitHub Telemetry" width="100%" />
+</div>
+
+<br />
+
+<div align="center">
+  <img src="https://streak-stats.demolab.com?user=KazeDevID&theme=github-dark-blue&hide_border=true&background=0D1117&ring=38BDF8&fire=38BDF8&currStreakLabel=38BDF8" alt="GitHub Streak" />
+</div>
+
+<br />
+
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=KazeDevID&bg_color=0D1117&color=94A3B8&line=38BDF8&point=F8FAFC&area=true&area_color=38BDF8&hide_border=true" alt="Contribution Activity Graph" width="100%" />
 </div>
 
 ---
 
-## 🛠️ Tech Stack & Tools
+### Flagship Projects
+
+| Project | Stack | Overview |
+| :--- | :--- | :--- |
+| [**kazewa**](https://github.com/KazeDevID/kazewa) | `TypeScript` | Next-gen WhatsApp Web Bot API & protocol library with compact session storage and dual pairing ([npm](https://www.npmjs.com/package/@kazedevid/kazewa)) |
+| [**baileys-rec**](https://github.com/KazeDevID/baileys-rec) | `JavaScript` | Enhanced Baileys with Native Flow interactive buttons, Cloud API protocol adapter, and rich message builders |
+| [**weabot-rust**](https://github.com/KazeDevID/weabot-rust) | `Rust` | High-throughput multi-device WhatsApp engine written in Rust |
+| [**userbot-tg**](https://github.com/KazeDevID/userbot-tg) | `JavaScript` | MTProto-powered Telegram userbot and automated personal assistant engine |
+| [**telegix**](https://github.com/KazeDevID/telegix) & [**teh**](https://github.com/KazeDevID/teh) | `TypeScript` | Lightweight Telegram Bot API frameworks for Node.js, Bun, and Deno |
+| [**free-subdo**](https://github.com/KazeDevID/free-subdo) | `Cloudflare` | Automated `*.zettai.my.id` free subdomain registry powered by Cloudflare DNS |
+
+---
+
+### Recently Updated Repositories
+
+<!-- REALTIME:REPOS:START -->
+| Repository | Description | Language | Stars | Updated |
+| :--- | :--- | :--- | :---: | :---: |
+| [**jadestream**](https://github.com/KazeDevID/jadestream) | Active engineering repository | `Kotlin` | 0 | 1h ago |
+| [**baileys-rec**](https://github.com/KazeDevID/baileys-rec) | Enhanced Baileys with Native Flow Interactive Buttons, WhatsApp Cloud API Proto... | `JavaScript` | 0 | 3d ago |
+| [**baileys-rec-bot**](https://github.com/KazeDevID/baileys-rec-bot) | Modern WhatsApp bot built with baileys-rec, modular plugin handler (wabot-aq st... | `JavaScript` | 0 | 4d ago |
+| [**kazewa**](https://github.com/KazeDevID/kazewa) | Next-Gen WhatsApp Web Bot API & Protocol Library with ultra-compact session sto... | `TypeScript` | 0 | 5d ago |
+| [**tiktok-sup**](https://github.com/KazeDevID/tiktok-sup) | Pure TikTok web scraper for Node.js without any 3rd party APIs. Scrape videos, ... | `JavaScript` | 0 | 9d ago |
+| [**weabot-rust**](https://github.com/KazeDevID/weabot-rust) | Blazingly fast, multi-device WhatsApp Bot written in Rust powered by whatsapp-rust | `Rust` | 0 | 10d ago |
+<!-- REALTIME:REPOS:END -->
+
+---
+
+### Recent Activity
+
+<!-- REALTIME:ACTIVITY:START -->
+- Open-sourced [**KazeDevID/jadestream**](https://github.com/KazeDevID/jadestream) · *11h ago*
+- Pushed 1 commit to [**KazeDevID/baileys-rec**](https://github.com/KazeDevID/baileys-rec) · *3d ago*
+- Created branch in [**KazeDevID/baileys-rec-bot**](https://github.com/KazeDevID/baileys-rec-bot) · *4d ago*
+- Pushed 1 commit to [**KazeDevID/kazewa**](https://github.com/KazeDevID/kazewa) · *5d ago*
+- Created branch in [**KazeDevID/baileys-rec**](https://github.com/KazeDevID/baileys-rec) · *5d ago*
+<!-- REALTIME:ACTIVITY:END -->
+
+---
+
+### Tech Stack
 
 <div align="center">
-
-<img src="https://media.giphy.com/media/SWoSkN6DxTszqIKEqv/giphy.gif" alt="Coder GIF" width="500">
-
-### 🎨 Frontend
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Vue.js](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D)
-
-### ⚡ Backend
-![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
-![Express.js](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
-
-### 🛢️ Databases
-![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
-
-### 🔧 Tools & Platforms
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=ts,js,rust,kotlin,py,php,react,nextjs,vue,tailwind,nodejs,express,postgres,mysql,mongodb,redis,docker,linux,git,cloudflare&perline=10&theme=dark" alt="Tech Stack" />
+  </a>
 </div>
 
 ---
 
-## 📊 GitHub Statistics
+### Connect & Support
 
 <div align="center">
-
-<img src="https://media.giphy.com/media/iY8CRBdQXODJSCERIr/giphy.gif" width="30px">&nbsp;***My working tools...***
-<br><br>
-
-<table>
-  <tr>
-    <td>
-      <img src="https://github-readme-stats.vercel.app/api?username=KazeDevID&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="KazeDev's GitHub Stats" />
-    </td>
-    <td>
-      <img src="https://github-readme-streak-stats.herokuapp.com/?user=KazeDevID&theme=tokyonight&hide_border=true" alt="KazeDev's Streak Stats" />
-    </td>
-  </tr>
-</table>
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=KazeDevID&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
-
+  <a href="https://lynk.id/kenalkaze">
+    <img src="https://img.shields.io/badge/Portfolio_%26_Links-0EA5E9?style=for-the-badge&logo=linktree&logoColor=white" alt="Links" />
+  </a>
+  <a href="https://www.npmjs.com/package/@kazedevid/kazewa">
+    <img src="https://img.shields.io/badge/npm-@kazedevid%2Fkazewa-CB3837?style=for-the-badge&logo=npm&logoColor=white" alt="NPM" />
+  </a>
+  <a href="https://ko-fi.com/kazedev">
+    <img src="https://img.shields.io/badge/Ko--fi-Support-FF5E5B?style=for-the-badge&logo=ko-fi&logoColor=white" alt="Ko-fi" />
+  </a>
+  <a href="https://www.buymeacoffee.com/kazedev">
+    <img src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me a Coffee" />
+  </a>
 </div>
 
----
-
-## 🏆 GitHub Profile Trophy
+<br />
 
 <div align="center">
-
-<img src="https://media.giphy.com/media/J5B1Y8QZnzXXbLQIBu/giphy.gif" width="30"> ***Trophy Case*** <img src="https://media.giphy.com/media/J5B1Y8QZnzXXbLQIBu/giphy.gif" width="30">
-  
-[![trophy](https://github-profile-trophy.vercel.app/?username=KazeDevID&theme=tokyonight&no-frame=true&row=1&column=6)](https://github.com/ryo-ma/github-profile-trophy)
-
-</div>
-
----
-
-## 🌟 Featured Repositories
-
-<div align="center">
-
-<img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="30"> <em><b>I love to make friends. so don't hesitate to reach me!</b> :)</em>
-
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=KazeDevID&repo=wbot&theme=tokyonight&hide_border=true)](https://github.com/KazeDevID/awesome-project)
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=KazeDevID&repo=web-development&theme=tokyonight&hide_border=true)](https://github.com/KazeDevID/web-development)
-
-</div>
-
----
-
-## 🐍 Contribution Snake
-
-<div align="center">
-
-<img src="https://raw.githubusercontent.com/platane/platane/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" />
-
-</div>
-
----
-
-## 📈 Contribution Graph
-
-<div align="center">
-
-<img src="https://media.giphy.com/media/W5eoZHPpUx9sapR0eu/giphy.gif" width="30px" alt="Git"/>&nbsp;<i><b>Git Productivity</b></i>
-  
-[![KazeDev's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=KazeDevID&theme=tokyo-night&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
-
-</div>
-
----
-
-## 🎯 Current Focus
-
-<div align="center">
-
-<img src="https://media.giphy.com/media/VTtANKl0beDFQRLDTh/giphy.gif" width="40"> ***What I'm working on...*** <img src="https://media.giphy.com/media/VTtANKl0beDFQRLDTh/giphy.gif" width="40">
-
-- 🔭 I'm currently working on **full-stack web applications**
-- 🌱 I'm currently learning **cloud technologies and DevOps**
-- 👯 I'm looking to collaborate on **open source projects**
-- 🤔 I'm looking for help with **system design and architecture**
-- 💬 Ask me about **JavaScript, React, Node.js, and coffee!**
-- ⚡ Fun fact: **I can turn coffee into code!** ☕➡️💻
-
-</div>
-
----
-
-## 🤝 Connect With Me
-
-<div align="center">
-
-<img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="30"> <em><b>Let's connect and chat!</b></em>
-
-[![GitHub followers](https://img.shields.io/github/followers/KazeDevID?label=Follow&style=social)](https://github.com/KazeDevID)
-[![GitHub stars](https://img.shields.io/github/stars/KazeDevID?label=Stars&style=social)](https://github.com/KazeDevID)
-
-<br>
-
----
-
-## 💭 Random Dev Quote
-
-<div align="center">
-
-<img src="https://media.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif" width="50">
-  
-![Quote](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight)
-
-</div>
-
----
-
-## ☕ Support My Work
-
-<div align="center">
-
-<img src="https://media.giphy.com/media/3oKIPnAiaMCws8nOsE/giphy.gif" width="50">
-
-**If you like my work and want to support me, consider buying me a coffee!** ☕
-
-[![Ko-Fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/kazedev)
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/kazedev)
-
-</div>
-
----
-
-## 🔥 Weekly Development Breakdown
-
-<div align="center">
-
-<!--START_SECTION:waka-->
-<!--END_SECTION:waka-->
-
-</div>
-
----
-
-<div align="center">
-  
-### 📊 Visitor Count
-![Visitor Count](https://profile-counter.glitch.me/KazeDevID/count.svg)
-
-### 💫 Thanks for visiting my profile!
-
-<img src="https://media.giphy.com/media/jpVnC65DmYeyRL4LHS/giphy.gif" width="20%">
-
-<img src="https://raw.githubusercontent.com/Trilokia/Trilokia/379277808c61ef204768a61bbc5d25bc7798ccf1/bottom_header.svg" alt="Bottom Header" />
-
-</div>
-
----
-
-⭐️ From [KazeDevID](https://github.com/KazeDevID) with ❤️ and lots of ☕
-
-<div align="center">
-  <img src="https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif" width="100">
+  <sub>
+    <!-- REALTIME:SYNC:START -->
+Last realtime sync: **17 Nov 2026, 09:26 WITA** · Automated via GitHub Actions
+<!-- REALTIME:SYNC:END -->
+  </sub>
 </div>
