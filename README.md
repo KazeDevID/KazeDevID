@@ -82,12 +82,12 @@ const kazeDevID = {
 <!-- REALTIME:REPOS:START -->
 | Repository | Description | Language | Stars | Updated |
 | :--- | :--- | :--- | :---: | :---: |
-| [**jadestream**](https://github.com/KazeDevID/jadestream) | Active engineering repository | `Kotlin` | 0 | 1h ago |
-| [**baileys-rec**](https://github.com/KazeDevID/baileys-rec) | Enhanced Baileys with Native Flow Interactive Buttons, WhatsApp Cloud API Proto... | `JavaScript` | 0 | 3d ago |
-| [**baileys-rec-bot**](https://github.com/KazeDevID/baileys-rec-bot) | Modern WhatsApp bot built with baileys-rec, modular plugin handler (wabot-aq st... | `JavaScript` | 0 | 4d ago |
-| [**kazewa**](https://github.com/KazeDevID/kazewa) | Next-Gen WhatsApp Web Bot API & Protocol Library with ultra-compact session sto... | `TypeScript` | 0 | 5d ago |
-| [**tiktok-sup**](https://github.com/KazeDevID/tiktok-sup) | Pure TikTok web scraper for Node.js without any 3rd party APIs. Scrape videos, ... | `JavaScript` | 0 | 9d ago |
+| [**baileys-rec**](https://github.com/KazeDevID/baileys-rec) | Enhanced Baileys with Native Flow Interactive Buttons, WhatsApp Cloud API Proto... | `JavaScript` | 0 | 4d ago |
+| [**baileys-rec-bot**](https://github.com/KazeDevID/baileys-rec-bot) | Modern WhatsApp bot built with baileys-rec, modular plugin handler (wabot-aq st... | `JavaScript` | 0 | 5d ago |
+| [**kazewa**](https://github.com/KazeDevID/kazewa) | Next-Gen WhatsApp Web Bot API & Protocol Library with ultra-compact session sto... | `TypeScript` | 0 | 6d ago |
+| [**tiktok-sup**](https://github.com/KazeDevID/tiktok-sup) | Pure TikTok web scraper for Node.js without any 3rd party APIs. Scrape videos, ... | `JavaScript` | 0 | 10d ago |
 | [**weabot-rust**](https://github.com/KazeDevID/weabot-rust) | Blazingly fast, multi-device WhatsApp Bot written in Rust powered by whatsapp-rust | `Rust` | 0 | 10d ago |
+| [**userbot-tg**](https://github.com/KazeDevID/userbot-tg) | High-performance Telegram Userbot & Selfbot Engine powered by MTProto. Turns yo... | `JavaScript` | 1 | 11d ago |
 <!-- REALTIME:REPOS:END -->
 
 ---
@@ -95,11 +95,11 @@ const kazeDevID = {
 ### Recent Activity
 
 <!-- REALTIME:ACTIVITY:START -->
-- Open-sourced [**KazeDevID/jadestream**](https://github.com/KazeDevID/jadestream) · *11h ago*
-- Pushed 1 commit to [**KazeDevID/baileys-rec**](https://github.com/KazeDevID/baileys-rec) · *3d ago*
-- Created branch in [**KazeDevID/baileys-rec-bot**](https://github.com/KazeDevID/baileys-rec-bot) · *4d ago*
-- Pushed 1 commit to [**KazeDevID/kazewa**](https://github.com/KazeDevID/kazewa) · *5d ago*
-- Created branch in [**KazeDevID/baileys-rec**](https://github.com/KazeDevID/baileys-rec) · *5d ago*
+- Pushed 1 commit to [**KazeDevID/KazeDevID**](https://github.com/KazeDevID/KazeDevID) · *13h ago*
+- Pushed 1 commit to [**KazeDevID/baileys-rec**](https://github.com/KazeDevID/baileys-rec) · *4d ago*
+- Created branch in [**KazeDevID/baileys-rec-bot**](https://github.com/KazeDevID/baileys-rec-bot) · *5d ago*
+- Pushed 1 commit to [**KazeDevID/kazewa**](https://github.com/KazeDevID/kazewa) · *6d ago*
+- Created branch in [**KazeDevID/baileys-rec**](https://github.com/KazeDevID/baileys-rec) · *6d ago*
 <!-- REALTIME:ACTIVITY:END -->
 
 ---
@@ -136,7 +136,7 @@ const kazeDevID = {
 <div align="center">
   <sub>
     <!-- REALTIME:SYNC:START -->
-Last realtime sync: **17 Nov 2026, 09:26 WITA** · Automated via GitHub Actions
+Last realtime sync: **17 Nov 2026, 23:25 WITA** · Automated via GitHub Actions
 <!-- REALTIME:SYNC:END -->
   </sub>
 </div>
