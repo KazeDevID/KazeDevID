@@ -11,19 +11,19 @@
     Realtime GitHub Telemetry
   </text>
   <text x="920" y="34" text-anchor="end" fill="#64748B" font-family="ui-monospace, Menlo, monospace" font-size="11.5">
-    Synced 18 Nov 2026, 08:24 WITA
+    Synced 18 Nov 2026, 22:58 WITA
   </text>
   <line x1="40" y1="48" x2="920" y2="48" stroke="#1E293B" />
 
   <g transform="translate(40, 74)">
     <text x="0" y="0" fill="#64748B" font-family="'Segoe UI', sans-serif" font-size="11.5" font-weight="600">PUBLIC REPOS</text>
-    <text x="0" y="28" fill="#F8FAFC" font-family="ui-monospace, Menlo, monospace" font-size="24" font-weight="700">44</text>
+    <text x="0" y="28" fill="#F8FAFC" font-family="ui-monospace, Menlo, monospace" font-size="24" font-weight="700">47</text>
 
     <text x="180" y="0" fill="#64748B" font-family="'Segoe UI', sans-serif" font-size="11.5" font-weight="600">FOLLOWERS</text>
     <text x="180" y="28" fill="#38BDF8" font-family="ui-monospace, Menlo, monospace" font-size="24" font-weight="700">97</text>
 
     <text x="360" y="0" fill="#64748B" font-family="'Segoe UI', sans-serif" font-size="11.5" font-weight="600">TOTAL STARS</text>
-    <text x="360" y="28" fill="#F8FAFC" font-family="ui-monospace, Menlo, monospace" font-size="24" font-weight="700">39</text>
+    <text x="360" y="28" fill="#F8FAFC" font-family="ui-monospace, Menlo, monospace" font-size="24" font-weight="700">40</text>
 
     <text x="540" y="0" fill="#64748B" font-family="'Segoe UI', sans-serif" font-size="11.5" font-weight="600">FORKS EARNED</text>
     <text x="540" y="28" fill="#F8FAFC" font-family="ui-monospace, Menlo, monospace" font-size="24" font-weight="700">19</text>
@@ -37,43 +37,45 @@
   </text>
   <rect x="40" y="138" width="880" height="10" rx="5" fill="#1E293B" />
   <g clip-path="url(#barClip)">
-    <rect x="40" y="138" width="533" height="10" fill="#F7DF1E" />
-    <rect x="573" y="138" width="133" height="10" fill="#3572A5" />
-    <rect x="706" y="138" width="80" height="10" fill="#3178C6" />
-    <rect x="786" y="138" width="53" height="10" fill="#E34C26" />
-    <rect x="839" y="138" width="27" height="10" fill="#DEA584" />
-    <rect x="866" y="138" width="27" height="10" fill="#563D7C" />
-    <rect x="893" y="138" width="27" height="10" fill="#00ADD8" />
+    <rect x="40" y="138" width="489" height="10" fill="#F7DF1E" />
+    <rect x="529" y="138" width="122" height="10" fill="#3572A5" />
+    <rect x="651" y="138" width="73" height="10" fill="#3178C6" />
+    <rect x="724" y="138" width="49" height="10" fill="#64748B" />
+    <rect x="773" y="138" width="49" height="10" fill="#E34C26" />
+    <rect x="822" y="138" width="24" height="10" fill="#A97BFF" />
+    <rect x="846" y="138" width="24" height="10" fill="#DEA584" />
+    <rect x="870" y="138" width="24" height="10" fill="#563D7C" />
+    <rect x="894" y="138" width="24" height="10" fill="#00ADD8" />
   </g>
 
   <g transform="translate(40, 176)">
       <rect x="0" y="-9" width="10" height="10" rx="2" fill="#F7DF1E" />
       <text x="18" y="0" fill="#E2E8F0" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="600">JavaScript</text>
-      <text x="115" y="0" fill="#94A3B8" font-family="ui-monospace, Menlo, monospace" font-size="12">60.6% (20 repos)</text>
+      <text x="115" y="0" fill="#94A3B8" font-family="ui-monospace, Menlo, monospace" font-size="12">55.6% (20 repos)</text>
     </g>
     <g transform="translate(335, 176)">
       <rect x="0" y="-9" width="10" height="10" rx="2" fill="#3572A5" />
       <text x="18" y="0" fill="#E2E8F0" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="600">Python</text>
-      <text x="115" y="0" fill="#94A3B8" font-family="ui-monospace, Menlo, monospace" font-size="12">15.2% (5 repos)</text>
+      <text x="115" y="0" fill="#94A3B8" font-family="ui-monospace, Menlo, monospace" font-size="12">13.9% (5 repos)</text>
     </g>
     <g transform="translate(630, 176)">
       <rect x="0" y="-9" width="10" height="10" rx="2" fill="#3178C6" />
       <text x="18" y="0" fill="#E2E8F0" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="600">TypeScript</text>
-      <text x="115" y="0" fill="#94A3B8" font-family="ui-monospace, Menlo, monospace" font-size="12">9.1% (3 repos)</text>
+      <text x="115" y="0" fill="#94A3B8" font-family="ui-monospace, Menlo, monospace" font-size="12">8.3% (3 repos)</text>
     </g>
     <g transform="translate(40, 204)">
-      <rect x="0" y="-9" width="10" height="10" rx="2" fill="#E34C26" />
-      <text x="18" y="0" fill="#E2E8F0" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="600">HTML</text>
-      <text x="115" y="0" fill="#94A3B8" font-family="ui-monospace, Menlo, monospace" font-size="12">6.1% (2 repos)</text>
+      <rect x="0" y="-9" width="10" height="10" rx="2" fill="#64748B" />
+      <text x="18" y="0" fill="#E2E8F0" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="600">Ruby</text>
+      <text x="115" y="0" fill="#94A3B8" font-family="ui-monospace, Menlo, monospace" font-size="12">5.6% (2 repos)</text>
     </g>
     <g transform="translate(335, 204)">
-      <rect x="0" y="-9" width="10" height="10" rx="2" fill="#DEA584" />
-      <text x="18" y="0" fill="#E2E8F0" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="600">Rust</text>
-      <text x="115" y="0" fill="#94A3B8" font-family="ui-monospace, Menlo, monospace" font-size="12">3.0% (1 repos)</text>
+      <rect x="0" y="-9" width="10" height="10" rx="2" fill="#E34C26" />
+      <text x="18" y="0" fill="#E2E8F0" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="600">HTML</text>
+      <text x="115" y="0" fill="#94A3B8" font-family="ui-monospace, Menlo, monospace" font-size="12">5.6% (2 repos)</text>
     </g>
     <g transform="translate(630, 204)">
-      <rect x="0" y="-9" width="10" height="10" rx="2" fill="#563D7C" />
-      <text x="18" y="0" fill="#E2E8F0" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="600">CSS</text>
-      <text x="115" y="0" fill="#94A3B8" font-family="ui-monospace, Menlo, monospace" font-size="12">3.0% (1 repos)</text>
+      <rect x="0" y="-9" width="10" height="10" rx="2" fill="#A97BFF" />
+      <text x="18" y="0" fill="#E2E8F0" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="600">Kotlin</text>
+      <text x="115" y="0" fill="#94A3B8" font-family="ui-monospace, Menlo, monospace" font-size="12">2.8% (1 repos)</text>
     </g>
 </svg>

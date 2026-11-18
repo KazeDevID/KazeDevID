@@ -34,11 +34,11 @@
   </text>
 
   <text x="40" y="192" fill="#94A3B8" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">
-    <tspan fill="#38BDF8" font-weight="600">44</tspan> Public Repos
+    <tspan fill="#38BDF8" font-weight="600">47</tspan> Public Repos
     <tspan fill="#475569">  ·  </tspan>
     <tspan fill="#38BDF8" font-weight="600">97</tspan> Followers
     <tspan fill="#475569">  ·  </tspan>
-    <tspan fill="#38BDF8" font-weight="600">39</tspan> Stars
+    <tspan fill="#38BDF8" font-weight="600">40</tspan> Stars
     <tspan fill="#475569">  ·  </tspan>
     Primary: <tspan fill="#E2E8F0" font-weight="600">JavaScript</tspan>
   </text>

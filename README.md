@@ -82,12 +82,12 @@ const kazeDevID = {
 <!-- REALTIME:REPOS:START -->
 | Repository | Description | Language | Stars | Updated |
 | :--- | :--- | :--- | :---: | :---: |
+| [**weabot-ruby**](https://github.com/KazeDevID/weabot-ruby) | Modular WhatsApp Bot in Ruby powered by KazeDevID/baileys-rec-rb with plugin ho... | `Ruby` | 0 | 9h ago |
+| [**whatsapp-web-ruby**](https://github.com/KazeDevID/whatsapp-web-ruby) | WhatsApp Bot & Automation Library for Ruby (Multi-Device, Interactive Buttons, ... | `Ruby` | 1 | 9h ago |
+| [**fruitdrop-auto**](https://github.com/KazeDevID/fruitdrop-auto) | Yeetalk Fruit Merge Auto Drop Bot with real-time detection & floating overlay | `Kotlin` | 0 | 9h ago |
 | [**baileys-rec**](https://github.com/KazeDevID/baileys-rec) | Enhanced Baileys with Native Flow Interactive Buttons, WhatsApp Cloud API Proto... | `JavaScript` | 0 | 4d ago |
-| [**baileys-rec-bot**](https://github.com/KazeDevID/baileys-rec-bot) | Modern WhatsApp bot built with baileys-rec, modular plugin handler (wabot-aq st... | `JavaScript` | 0 | 5d ago |
-| [**kazewa**](https://github.com/KazeDevID/kazewa) | Next-Gen WhatsApp Web Bot API & Protocol Library with ultra-compact session sto... | `TypeScript` | 0 | 6d ago |
-| [**tiktok-sup**](https://github.com/KazeDevID/tiktok-sup) | Pure TikTok web scraper for Node.js without any 3rd party APIs. Scrape videos, ... | `JavaScript` | 0 | 10d ago |
-| [**weabot-rust**](https://github.com/KazeDevID/weabot-rust) | Blazingly fast, multi-device WhatsApp Bot written in Rust powered by whatsapp-rust | `Rust` | 0 | 10d ago |
-| [**userbot-tg**](https://github.com/KazeDevID/userbot-tg) | High-performance Telegram Userbot & Selfbot Engine powered by MTProto. Turns yo... | `JavaScript` | 1 | 11d ago |
+| [**baileys-rec-bot**](https://github.com/KazeDevID/baileys-rec-bot) | Modern WhatsApp bot built with baileys-rec, modular plugin handler (wabot-aq st... | `JavaScript` | 0 | 6d ago |
+| [**kazewa**](https://github.com/KazeDevID/kazewa) | Next-Gen WhatsApp Web Bot API & Protocol Library with ultra-compact session sto... | `TypeScript` | 0 | 7d ago |
 <!-- REALTIME:REPOS:END -->
 
 ---
@@ -95,11 +95,11 @@ const kazeDevID = {
 ### Recent Activity
 
 <!-- REALTIME:ACTIVITY:START -->
-- Pushed 1 commit to [**KazeDevID/KazeDevID**](https://github.com/KazeDevID/KazeDevID) · *22h ago*
-- Pushed 1 commit to [**KazeDevID/baileys-rec**](https://github.com/KazeDevID/baileys-rec) · *4d ago*
-- Created branch in [**KazeDevID/baileys-rec-bot**](https://github.com/KazeDevID/baileys-rec-bot) · *5d ago*
-- Pushed 1 commit to [**KazeDevID/kazewa**](https://github.com/KazeDevID/kazewa) · *6d ago*
-- Created branch in [**KazeDevID/baileys-rec**](https://github.com/KazeDevID/baileys-rec) · *6d ago*
+- Starred [**KazeDevID/whatsapp-web-ruby**](https://github.com/KazeDevID/whatsapp-web-ruby) · *7h ago*
+- Open-sourced [**KazeDevID/fruitdrop-auto**](https://github.com/KazeDevID/fruitdrop-auto) · *3d ago*
+- Pushed 1 commit to [**KazeDevID/KazeDevID**](https://github.com/KazeDevID/KazeDevID) · *1d ago*
+- Pushed 1 commit to [**KazeDevID/baileys-rec**](https://github.com/KazeDevID/baileys-rec) · *5d ago*
+- Created branch in [**KazeDevID/baileys-rec-bot**](https://github.com/KazeDevID/baileys-rec-bot) · *6d ago*
 <!-- REALTIME:ACTIVITY:END -->
 
 ---
@@ -136,7 +136,7 @@ const kazeDevID = {
 <div align="center">
   <sub>
     <!-- REALTIME:SYNC:START -->
-Last realtime sync: **18 Nov 2026, 08:24 WITA** · Automated via GitHub Actions
+Last realtime sync: **18 Nov 2026, 22:58 WITA** · Automated via GitHub Actions
 <!-- REALTIME:SYNC:END -->
   </sub>
 </div>
