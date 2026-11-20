@@ -85,7 +85,7 @@ const kazeDevID = {
 | [**weabot-ruby**](https://github.com/KazeDevID/weabot-ruby) | Modular WhatsApp Bot in Ruby powered by KazeDevID/baileys-rec-rb with plugin ho... | `Ruby` | 0 | 2d ago |
 | [**whatsapp-web-ruby**](https://github.com/KazeDevID/whatsapp-web-ruby) | WhatsApp Bot & Automation Library for Ruby (Multi-Device, Interactive Buttons, ... | `Ruby` | 1 | 2d ago |
 | [**fruitdrop-auto**](https://github.com/KazeDevID/fruitdrop-auto) | Yeetalk Fruit Merge Auto Drop Bot with real-time detection & floating overlay | `Kotlin` | 0 | 2d ago |
-| [**baileys-rec**](https://github.com/KazeDevID/baileys-rec) | Enhanced Baileys with Native Flow Interactive Buttons, WhatsApp Cloud API Proto... | `JavaScript` | 0 | 6d ago |
+| [**baileys-rec**](https://github.com/KazeDevID/baileys-rec) | Enhanced Baileys with Native Flow Interactive Buttons, WhatsApp Cloud API Proto... | `JavaScript` | 0 | 7d ago |
 | [**baileys-rec-bot**](https://github.com/KazeDevID/baileys-rec-bot) | Modern WhatsApp bot built with baileys-rec, modular plugin handler (wabot-aq st... | `JavaScript` | 0 | 8d ago |
 | [**kazewa**](https://github.com/KazeDevID/kazewa) | Next-Gen WhatsApp Web Bot API & Protocol Library with ultra-compact session sto... | `TypeScript` | 0 | 9d ago |
 <!-- REALTIME:REPOS:END -->
@@ -136,7 +136,7 @@ const kazeDevID = {
 <div align="center">
   <sub>
     <!-- REALTIME:SYNC:START -->
-Last realtime sync: **20 Nov 2026, 22:47 WITA** · Automated via GitHub Actions
+Last realtime sync: **21 Nov 2026, 07:36 WITA** · Automated via GitHub Actions
 <!-- REALTIME:SYNC:END -->
   </sub>
 </div>
